@@ -35,6 +35,10 @@ command! -nargs=* MyCheatSheet call s:fzf_my_cheat_sheet(<q-args>)
 nnoremap <silent> ,ch :<C-u>MyCheatSheet<CR>
 ```
 
+## Demo
+
+https://user-images.githubusercontent.com/309466/179929271-9d58855b-225c-44bb-b3f8-2d9bcef455a0.mov
+
 ## License
 
 The MIT license
