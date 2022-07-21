@@ -10,7 +10,7 @@ Needs [fzf](https://github.com/junegunn/fzf) and [fzf.vim](https://github.com/ju
 function! s:fzf_my_cheat_sheet(query) abort
   let command = 'git grep -- %s'
   let options = {
-        \ 'dir' : '/path/to/vim-cheat-sheet',
+        \ 'dir' : '/path/to/vim-cheat-sheet/cheatsheet',
         \ 'options' : [
         \   '--bind', 'change:reload:' . printf(command, '{q}'),
         \   '--preview-window', 'top,80%',
@@ -24,7 +24,7 @@ function! s:fzf_my_cheat_sheet(query) abort
         \ }
 
   call fzf#vim#grep(
-        \ printf(command, shellescape(a:query)),
+        \ printf(command, shellescape('title:')),
         \ 0,
         \ fzf#vim#with_preview(options)
         \ )
