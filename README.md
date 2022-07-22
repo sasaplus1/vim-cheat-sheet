@@ -8,11 +8,15 @@ Needs [fzf](https://github.com/junegunn/fzf) and [fzf.vim](https://github.com/ju
 
 ```vim
 function! s:fzf_my_cheat_sheet(query) abort
-  let command = 'git grep -- %s'
+  let command = executable('rg') ?
+        \ 'rg --color=always --column --line-number --no-heading --smart-case -- %s || true' :
+        \ 'git grep --ignore-case -- %s || true'
+
   let options = {
         \ 'dir' : '/path/to/vim-cheat-sheet/cheatsheet',
         \ 'options' : [
         \   '--bind', 'change:reload:' . printf(command, '{q}'),
+        \   '--disabled',
         \   '--preview-window', 'top,80%',
         \   '--prompt', 'CheatSheet> ',
         \   '--query', a:query,
