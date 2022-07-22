@@ -41,7 +41,7 @@ nnoremap <silent> ,ch :<C-u>MyCheatSheet<CR>
 
 ## Demo
 
-https://user-images.githubusercontent.com/309466/179929271-9d58855b-225c-44bb-b3f8-2d9bcef455a0.mov
+https://user-images.githubusercontent.com/309466/180336633-48d867a5-9581-4599-a739-45a8227fb588.mov
 
 ## License
 
